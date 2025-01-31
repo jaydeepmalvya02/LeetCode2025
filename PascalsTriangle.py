@@ -10,4 +10,22 @@ def PascalsTriangle(n):
         ans.append(row)
     return ans
 x=PascalsTriangle(5)
-print(x)
+
+
+def GenerateRows(r):
+    ans=1
+    ansRow=[1]
+    for i in range(1,r):
+        ans=ans*(r-i)
+        ans=ans//i
+        ansRow.append(ans)
+
+    print(ansRow)
+    return ansRow
+def Pascals2(n):
+    ans=[]
+    for i in range(1,n+1):
+        x=GenerateRows(i)
+        ans.append(x)
+    print(ans)
+Pascals2(6)
